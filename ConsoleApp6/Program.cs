@@ -6,10 +6,6 @@ namespace ConsoleApp6
 	{
 		static void Main(string[] args)
 		{
-			try
-			{
-
-
 				Console.WriteLine("Введите максимальное число рандома");
 				int n = Convert.ToInt32(Console.ReadLine());
 				Console.WriteLine("Введите кол-во элементов массива");
@@ -39,11 +35,18 @@ namespace ConsoleApp6
 				{
 					Console.WriteLine(arr[i] + " ");
 				}
-			}
-			catch (Exception e)
-			{
-				Console.WriteLine(e.Message);
-			}
+				Console.WriteLine("Введите искомое число");
+				int c= Convert.ToInt32(Console.ReadLine());
+				for (int i = 0; i < arr.Length; i++)
+			    { 
+				if (arr[i] == c)
+				{
+					Console.WriteLine(i);
+				}
+				else 
+					Console.WriteLine(" Такого числа нет ");
+				}
+
 			Console.ReadKey();
 		}
 	}
